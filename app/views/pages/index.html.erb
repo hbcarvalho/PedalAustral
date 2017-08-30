@@ -79,21 +79,22 @@
 		<div class="container">
 			<div class="row text-right">
 				<!-- ABOUT US LEFT HALF -->
-				<div class="col-md-4 base-background">
-					<div class="content">
-						<a class="template-brand" href="#">
-							<img src="images/logo.png" alt="Mountain Biking">
-						</a>
+        <% @home_abouts.each do |h| %>
+  				<div class="col-md-4 base-background">
+  					<div class="content">
+  						<a class="template-brand" href="#">
+  							<img src="images/logo.png" alt="Mountain Biking">
+  						</a>
 
-						<h1>Trail Bike</h1>
-						<p class="sub-heading">MOUNTAIN BIKING CLUB</p>
+  						<h1><%= h.title %></h1>
+  						<p class="sub-heading"><%= h.subtitle %></p>
 
-						<p>Trail Bike is the on of the largest mountain biking club in Newyork. We are promoting sustainable trail access for mountain bikers and also trained cyclists.</p>
+  						<p><%= h.description %></p>
 
-						<p><a href="#" class="btn btn-trans btn-md">learn more about us</a></p>
-					</div>
-				</div>
-
+  						<p><a href="#" class="btn btn-trans btn-md"><%= h.button_text %></a></p>
+  					</div>
+  				</div>
+        <% end %>
 				<!-- CAROUSEL RIGHT HALF -->
 				<div class="col-md-6 col-md-offset-2">
 					<div class="owl-carousel">
