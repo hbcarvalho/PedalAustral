@@ -98,16 +98,18 @@
 				<!-- CAROUSEL RIGHT HALF -->
 				<div class="col-md-6 col-md-offset-2">
 					<div class="owl-carousel">
-						<div class="item text-slider">
-							<div class="content">
-								<h3>the big event is comming</h3>
+            <% @home_carousels.each do |h| %>
+  						<div class="item text-slider">
+  							<div class="content">
+  								<h3><%= h.title %></h3>
 
-								<p>On June 07, we are going to arrange a big event which will be one of the biggest event in the history for California’s bicyclists. We will gather around 1500 cyclists in mountain velly at 10am who will come from around the USA from different cycling clubs and also individuals. So, don’t miss this opportunity to make a history and printed your name on the record books.</p>
+  								<p><%= h.description %></p>
 
-								<p><a href="#" class="btn btn-trans btn-md">Join with us</a></p>
-							</div>
-						</div>
-
+  								<p><a href="#" class="btn btn-trans btn-md"><%= h.button_text %></a></p>
+  							</div>
+  						</div>
+            <% end %>
+<!--
 						<div class="item text-slider">
 							<div class="content">
 								<h3>biggest event in the history</h3>
@@ -127,6 +129,7 @@
 								<p><a href="#" class="btn btn-trans btn-md">Join with us</a></p>
 							</div>
 						</div>
+-->
 					</div>
 				</div>
 			</div>
