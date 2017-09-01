@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830220433) do
+ActiveRecord::Schema.define(version: 20170831033238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20170830220433) do
   create_table "home_abouts", force: :cascade do |t|
     t.string "title"
     t.string "subtitle"
+    t.text "description"
+    t.string "button_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_carousels", force: :cascade do |t|
+    t.string "title"
     t.text "description"
     t.string "button_text"
     t.datetime "created_at", null: false

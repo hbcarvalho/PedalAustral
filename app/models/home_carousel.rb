@@ -1,0 +1,2 @@
+class HomeCarousel < ApplicationRecord
+end
