@@ -11,7 +11,7 @@ This css file will overwrite bootstrap css
 # License: GPL v2 or later
 # License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 # Tags: mountain, biking, bike, club, biking club, mountain biking, mountain biking club, biking club theme
----------------------------------------------------------------------- 
+----------------------------------------------------------------------
 ========================================================================
 */
 
@@ -48,7 +48,7 @@ This css file will overwrite bootstrap css
 		4-1-5. OWL CAROUSEL CONTROL
 
 	4-2. ABOUT US
-	4-3. BIKE TRAILS 
+	4-3. BIKE TRAILS
 	4-4. EVENTS
 	4-5. GALLERY
 	4-6. OUR TEAM
@@ -568,7 +568,7 @@ article footer {
   float: left;
 }
 .text-slider-bg {
-  background: url(../images/text-slider-bg.jpg) no-repeat center center;
+  background: url('text-slider-bg.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -729,7 +729,7 @@ article footer {
 }
 .success-story .full-story:hover a {
 	color: #fe4819;
-	outline: 
+	outline:
 }
 /*
 |----------------------------------------------------------------------------
@@ -1445,7 +1445,7 @@ article footer {
 }
 .footer-bottom-2 .content {
 	width: 630px;
-	margin: 30px auto 0; 
+	margin: 30px auto 0;
 }
 .footer-bottom-2 .copyright {
 	margin-top: 40px;
