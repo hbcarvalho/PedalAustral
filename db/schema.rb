@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831033238) do
+ActiveRecord::Schema.define(version: 20170909210539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,50 @@ ActiveRecord::Schema.define(version: 20170831033238) do
     t.string "title"
     t.text "description"
     t.string "button_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_contacts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "button_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_projects", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "button_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_routes", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "button_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "button_text"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "url_image"
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "url_route"
+    t.string "button_text"
+    t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

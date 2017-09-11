@@ -120,71 +120,32 @@
 		<div class="row">
 			<!-- SECTION HEAD -->
 			<div class="mb-30 mb-45 col-md-4">
-				<header class="section-heading">
-					<h2 class="title-text">About Us</h2>
-				</header> <!-- /.section-heading -->
+        <% @home_projects.each do |p| %>
+  				<header class="section-heading">
+  					<h2 class="title-text"><%= p.title %></h2>
+  				</header> <!-- /.section-heading -->
 
-				<p>Trail Bike was stablised in 1998 at Newyork City by four friends Chris, Juisa, Alleja and Alejandro. Now it is the biggest biking club in Newyork and top 5 in USA with around 5000 active members. We arrange numbers of events and programs throughout the years to raise awerness about green city, save tracking and many more. We have a large vision to make a revolution to stablish green city and making beautiful and comfortable trails for mountain biker throughout the country. </p>
+  				<p><%= p.description %></p>
+        <% end %>
 			</div> <!-- /END SECTION HEAD -->
 
 			<!-- SECTION BODY -->
 			<div class="col-md-8">
 				<div class="mb-30 owl-carousel controls-right">
+          <% @projects.each do |p| %>
 					<div class="item">
 						<figure class="hover-element">
-						  <%= image_tag('thumbnails/about-1.jpg', alt: 'About Mountain Biking', class: 'img-responsive')%>
+						  <%= image_tag(p.url_image, alt: 'About Mountain Biking', class: 'img-responsive')%>
 							<figcaption class="hover-content element-lg text-center">
-								<h5>Monthly Biking Event</h5>
-								<div class="wrap">
-									<p>Every Year we organised two biking competion for professional bikers and also for new comers. We trained the new bikers for safe tracking.</p>
-									<a href="blog-single.html" class="btn btn-trans btn-md">Learn More</a>
-								</div>
+  							<h5><%= p.title %></h5>
+  							<div class="wrap">
+  								<p><%= p.description %></p>
+  								<a href="blog-single.html" class="btn btn-trans btn-md"><%= p.button_text %></a>                  
+  							</div>
 							</figcaption>
 						</figure>
 					</div>
-
-					<div class="item">
-						<figure class="hover-element">
-							<!-- <img src="images/thumbnails/about-2.jpg" alt="About Mountain Biking" class="img-responsive"> -->
-              <%= image_tag('thumbnails/about-2.jpg', alt: 'About Mountain Biking', class: 'img-responsive')%>
-
-							<figcaption class="hover-content element-lg text-center">
-								<h5>Biking Competition</h5>
-								<div class="wrap">
-									<p>Every Year we organised two biking competion for professional bikers and also for new comers. We trained the new bikers for safe tracking.</p>
-									<a href="blog-single.html" class="btn btn-trans btn-md">Learn More</a>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
-
-					<div class="item">
-						<figure class="hover-element">
-              <%= image_tag('thumbnails/about-1.jpg', alt: 'About Mountain Biking', class: 'img-responsive')%>
-
-							<figcaption class="hover-content element-lg text-center">
-								<h5>Monthly Biking Event</h5>
-								<div class="wrap">
-									<p>Every Year we organised two biking competion for professional bikers and also for new comers. We trained the new bikers for safe tracking.</p>
-									<a href="blog-single.html" class="btn btn-trans btn-md">Learn More</a>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
-
-					<div class="item">
-						<figure class="hover-element">
-              <%= image_tag('thumbnails/about-2.jpg', alt: 'About Mountain Biking', class: 'img-responsive')%>
-
-							<figcaption class="hover-content element-lg text-center">
-								<h5>Biking Competition</h5>
-								<div class="wrap">
-									<p>Every Year we organised two biking competion for professional bikers and also for new comers. We trained the new bikers for safe tracking.</p>
-									<a href="blog-single.html" class="btn btn-trans btn-md">Learn More</a>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
+          <% end %>
 				</div>
 			</div> <!-- /END SECTION BODY -->
 		</div>
@@ -200,11 +161,13 @@
 		<div class="row">
 			<!-- SECTION HEAD -->
 			<div class="mb-30 mb-45 col-md-3">
-				<header class="section-heading">
-					<h2 class="title-text">Bike Trail</h2>
-				</header> <!-- /.section-heading -->
+        <% @home_routes.each do |r| %>
+  				<header class="section-heading">
+  					<h2 class="title-text"><%= r.title %></h2>
+  				</header> <!-- /.section-heading -->
 
-				<p>Trail Bike hosts regular group rides on the mountain throught the years, mostly iduring the warmers month. We make our own trail by diging and we also use the natural trail on the mountain.</p>
+  				<p><%= r.description %></p>
+        <% end %>
 			</div> <!-- /END SECTION HEAD -->
 
 			<!-- SECTION BODY -->
@@ -309,7 +272,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-6">
+						<!-- <div class="col-md-6">
 							<div class="form-group">
 								<label class="sr-only" for="name">Phone number (optional)</label>
 								<div class="input-group">
@@ -317,9 +280,9 @@
 							   	<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone number (optional)">
 								</div>
 							</div>
-						</div>
+						</div> -->
 
-						<div class="col-md-6">
+						<!-- <div class="col-md-6">
 							<div class="form-group">
 								<label class="sr-only" for="name">Your website (optional)</label>
 								<div class="input-group">
@@ -327,7 +290,7 @@
 							   	<input type="url" class="form-control" id="website" name="website" placeholder="Your website (optional)">
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="col-md-12">
 							<div class="form-group">
@@ -373,7 +336,7 @@
 						</div>
 
 						<div class="media-body">
-							<p class="title-text">Address</p>
+							<p class="title-text">Endereço</p>
 							<p>63739 street l12/5 House <br> City, Country</p>
 						</div>
 					</div>
