@@ -1,0 +1,2 @@
+class HomeRoute < ApplicationRecord
+end

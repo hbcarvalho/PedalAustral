@@ -1,0 +1,2 @@
+class HomeContact < ApplicationRecord
+end

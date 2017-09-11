@@ -1,0 +1,2 @@
+class HomeProject < ApplicationRecord
+end
