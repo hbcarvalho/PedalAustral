@@ -37,6 +37,8 @@ gem 'rails_admin'
 
 gem 'jquery-rails'
 
+gem 'rename'
+
 # gem 'twitter-bootstrap-rails', '~> 4.0'
 
 group :development, :test do
